@@ -1,6 +1,8 @@
 # Day 1 code will have comments before the block of code
 ### Blocks printed with hyphens between are seperate lessons and will have comments for what is covered in the space ###
 
+###--Variables, manipulating variaable and representing variables in print statements--###
+
 #Simple Message: Basics to create a variable and print it
 message = "100 days of code has started"
 print(message)
@@ -49,7 +51,7 @@ print(f"My favorite number is {fav_number}")
 
 #--------------------------------------------------------------------------------------------------------------------------#
 
-### Names, list (LIST ARE SQUARE BRACKETS), and modifying list ###
+###--list (LIST ARE SQUARE BRACKETS), and modifying list--###
 
 #Names: create a list of n ames and print each persons name by element
 

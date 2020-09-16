@@ -1,5 +1,9 @@
 #Day 2 of 100 days of code
 
+### Blocks printed with hyphens between are seperate lessons and will have comments for what is covered in the space ###
+
+###--Continuation of list and modifying them. Sorting them, adding them, deleting from them--###
+
 #Seeing the world: Make a list of 5 places. Print the list, use sorted(), print again, used sorted to reverse the list
 locations = ["Spain", "Egypt", "Canada", "Asia"]
 print(locations)
