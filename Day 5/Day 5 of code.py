@@ -67,3 +67,9 @@ elif age < 65:
     print("Adult")
 else:
     print("Elder")
+
+
+#Favorite Fruit: Make a list of fruit, use it in if in statement> write 5 if statements to check if certain fruit in list
+fav_fruit = ["Nanas", "Oranges", "Apple", "Grapes"]
+if 'Apple' in fav_fruit:
+    print("It is in here")
