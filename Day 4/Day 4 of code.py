@@ -46,8 +46,8 @@ buffet = ("Chicken", "Fish", "Pizza", "French Fries", "Burgers")
 for food in buffet:
     print(food)
 
-#This will fail
-buffet[0] = "Tacos"
+#This will fail. Commented out for the code to work with no errors
+##buffet[0] = "Tacos"
 
 #This will not because we are redefining it and not changing its content
 buffet = ()
@@ -55,7 +55,40 @@ print(buffet)
 
 #Make sure to look into PEP8 standards for coding and best practices. Make sure all code up until now and future follows that protocol
 
-###---------------------------------------------------------------------###
+#--------------------------------------------------------------------------------------------------------------------------#
 
+###Conditional testing: comparing string values, if statements, and more###
 
-###Conditional testing: comparing string values, if statements, and more
+#Print conditional stateements
+person = 'you'
+print("is person == 'you'? I predict true")
+print(person == 'you')
+
+person = 'me'
+print("is person == 'you'? I predict false")
+print(person == 'me')
+
+#Additional practice asking to print statements that are true and false. 5 for each
+#Will not be doing as it is practice I do not believe I need
+
+#More conditional statements: Test for (in)equality, test using lower method, numerical test, >/</>=/<=/=/!=, and/or, and if is(not) in list
+people = "Us"
+number = 5
+numbers = [5, 7, 8, 21, 2, 0] #No parenthesis needed as these are integers
+print(people == "us")
+print(people == "Us")
+if number > 10:
+    print("oh Yeaaa")
+if number > 10 and people == "Us":
+    print("Yes Yes")
+if people.lower()== "us":
+    print("Case Ignored")
+print(number == 5)
+print(number <= 5)
+print(number > 5)
+print(number != 5)
+if number < 3 or number > 4:
+    print("Big numbers")
+if 8 in numbers:
+    print("We found it")
+
