@@ -1,5 +1,4 @@
 #Day 2 of 100 days of code
-
 ### Blocks printed with hyphens between are seperate lessons and will have comments for what is covered in the space ###
 
 ###--Continuation of list and modifying them. Sorting them, adding them, deleting from them--###

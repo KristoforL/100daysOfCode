@@ -55,7 +55,7 @@ print(buffet)
 
 #Make sure to look into PEP8 standards for coding and best practices. Make sure all code up until now and future follows that protocol
 
-#--------------------------------------------------------------------------------------------------------------------------#
+#-----------------------------------------------------------------------------#
 
 ###Conditional testing: comparing string values, if statements, and more###
 

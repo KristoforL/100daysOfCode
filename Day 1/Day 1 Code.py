@@ -49,7 +49,7 @@ print(f"My favorite number is {fav_number}")
 
 #Adding Comments: Just a general rule of thumb to add comments so that other coders are not asking you what your code does
 
-#--------------------------------------------------------------------------------------------------------------------------#
+#-----------------------------------------------------------------------------#
 
 ###--list (LIST ARE SQUARE BRACKETS), and modifying list--###
 
