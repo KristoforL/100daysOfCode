@@ -95,4 +95,20 @@ for key, value in fav_places.items():
 
 #Fav_number: modify fav number so each person has more that one fav_number and loop through it
 
-fav_number
+fav_number = {'j':[5,10,20], 'k':[3,34]}
+for key, values in fav_number.items():
+    print(f"{key}'s favorite numbers are:")
+    for value in values:
+        print(f"{value}")
+
+#Cities: create a city dictionay with location and population as another dictionary of values
+
+cities = {'atlanta': {'population': 'x', 'location': 'Ga'},
+          'tokyo': {'population': 'y', 'location': 'Japan'}}
+
+for city, values in cities.itmes():
+    print(f"{city}:")
+    for key, value in values.items():
+        print(f"{key}:{value}")
+
+#Extensions. I am going to practice some stuff from previous days and create new files to go into that days folder
