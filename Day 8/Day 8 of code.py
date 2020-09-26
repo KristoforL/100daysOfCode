@@ -29,9 +29,22 @@ else:
 
 #Pizza toppings: write a look that ask a user for pizza toppings until they enter quit. Print we will add that topping to your pizza
 
-topp = ("What topping would you like? Enter quit to end: ")
+topp = ("What topping would you like? Enter quit to end: \n")
 topping = ""
 while topping.lower() != 'quit':
     topping = input(topp)
     print(f"We will add {topping}\n")
     
+#Movie Tickets: Ask for age and print price based on age in logo
+
+age = input("What is your age? Enter 00 to quit:\n")
+age = int(age)
+
+while age != 00:
+    if age < 3:
+        print("Free")
+    elif age < 13:
+        print("$10")
+    else:
+        print("$15")
+
