@@ -12,7 +12,8 @@ print(f"Let me see if we have {car}")
 #Restaurant seating: ASk user how many people: if more than 8 say they will have to wait otherwise table is ready
 
 seating = input("How many people are in the party: ")
-if setaing < 8:
+seating = int(seating)
+if seating < 8:
     print("There is a table ready")
 else:
     print("There will be a wait")
@@ -20,7 +21,17 @@ else:
 #Multiples of ten: Ask user for number and see if it is a multiple of ten. If so then print multiple of ten and if not then it will say not mukltiple of ten
 
 number = input ("Enter a number: ")
+number = int(number)
 if number%10 == 0:
     print("That is a multiple of 10")
 else:
     print("That is not a multiple of 10")
+
+#Pizza toppings: write a look that ask a user for pizza toppings until they enter quit. Print we will add that topping to your pizza
+
+topp = ("What topping would you like? Enter quit to end: ")
+topping = ""
+while topping.lower() != 'quit':
+    topping = input(topp)
+    print(f"We will add {topping}\n")
+    
