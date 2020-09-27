@@ -15,7 +15,7 @@ make_tshirt(message='I like to lift', size='L')
 
 #Large Tshirts: modify above code so its a large shirt by default and message is I love python. Make a default shirt, one with default message and one with different size and message
 
-def make_tshirt(size='large', text='I love python'):
+def make_tshirt(size='large', text ='I love python'):
     """Makes shirt with default size and message"""
     print(f"Size: {size}\nText: {text}")
 make_tshirt()
@@ -32,4 +32,11 @@ cities('Atlanta','usa')
 cities('Toronto', 'Canada')
 cities('Sydney', 'Australia')
 
-#City Names: FUnction calle city_country:
+#City Names: FUnction called city_country() that takes in the neame of of a city and it's country. return string
+def city_country(city, country):
+    """Return city and country in string"""
+    format =f"{city} is in {country}"
+    return format
+
+atl = city_country('atlanta', 'usa')
+print(atl)
