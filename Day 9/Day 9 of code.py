@@ -91,4 +91,19 @@ print("You all want to visit:")
 for v in vacay:
     print(v)
 
-#Message 
+#Message write a fuction- display message that prints one sentence telling everyone what you are learning. Call function
+
+def greet_user():
+    """Greet user"""
+    print("I have learned a lot")
+
+greet_user()
+
+#Fav book: fav book functioni that takes in book title and prints out one of my fav books is...
+
+def fav_book(title):
+    """prints fav book"""
+    print(f"One of my fav books is {title}")
+
+fav_book("Perks of being a wallflower")
+
