@@ -32,7 +32,7 @@ cities('Atlanta','usa')
 cities('Toronto', 'Canada')
 cities('Sydney', 'Australia')
 
-#City Names: FUnction called city_country() that takes in the neame of of a city and it's country. return string
+#City Names: Function called city_country() that takes in the neame of of a city and it's country. return string
 def city_country(city, country):
     """Return city and country in string"""
     format =f"{city} is in {country}"
