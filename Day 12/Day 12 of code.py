@@ -16,7 +16,28 @@ def sandwiches(items):
     for item in items:
         print(item)
 
-
 sandwiches(one)
 sandwiches(two)
 sandwiches(three)
+
+#User Profile user code with arbitrary keyword value to describe myself
+
+def profile(first, last, **user_info):
+    """Build profile with extra info"""
+    user_info['first_name']= first
+    user_info['last_name']= last
+    return user_info
+
+user_pro= profile('J','K', Birth='Dec')
+print(user_pro)
+
+#Cars: Function that always accepts  model, manufacturer and arbitrary info: return info
+
+def car(manufacturer, model, **info):
+    """returns car info"""
+    info['manufacturer']= manufacturer
+    info['model']= model
+    return info
+
+Jeep = car('Jeep','Patriot',color='White')
+print(Jeep)
