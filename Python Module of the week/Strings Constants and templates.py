@@ -10,10 +10,30 @@ print(string.capwords(s))
 
 #You can get the same results from splitting the string capitalizing each word then joining them back together. 
 
-#
+#Templates: 
 
-value = {'foo':'var'}
+values = {'var' : 'foo'}
 
+t = string.Template("""
+Variable : $var
+Escape : $$
+Variable in text: ${var}iable
+""")
 
+print('TEMPLATE:', t.substitute(values))
 
+s = """
+Variable        : %(var)s
+Escape          : %%
+Variable in text: %(var)siable
+"""
 
+print('INTERPOLATION:', s % values)
+
+s = """
+Variable        : {var}
+Escape          : {{}}
+Variable in text: {var}iable
+"""
+
+print('FORMAT:', s.format(**values))
