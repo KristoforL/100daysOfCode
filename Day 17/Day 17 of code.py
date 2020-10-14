@@ -40,3 +40,14 @@ for line in lines:
 guest = input("What is your name: ")
 
 file = 'guest.txt'
+#This will write the name to the file
+with open(file, 'w') as file:
+    file.write(guest)
+    
+#This will print the file
+file = 'guest.txt'
+with open(file) as file:
+    contents = file.readlines()
+
+print(contents)
+

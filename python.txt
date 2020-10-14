@@ -1,0 +1,3 @@
+In Python you can loop
+In Python you can add to files
+In Python you can do everything easier
