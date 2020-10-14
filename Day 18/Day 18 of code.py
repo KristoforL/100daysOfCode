@@ -70,4 +70,19 @@ while True:
     else:
         print(answer)
 
-print(5/0)
+#Addition Calculator: Wrap above in while loop. I got ahead of myself and did that already.
+
+#Cats and dogs: Make two ffiles with 3 names in each. Write a progra to try and read file. Wrap in try catch filenotfound errors. Test that error works
+
+def read(file):
+    try:
+        with open(file) as file:
+            content = file.read()
+    except FileNotFoundError:
+        print('File is not found here. Check location')
+    else:
+        print(content)
+
+
+read('cats.txt')
+read('dogs.txt')
