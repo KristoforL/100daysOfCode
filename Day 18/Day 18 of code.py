@@ -86,3 +86,42 @@ def read(file):
 
 read('cats.txt')
 read('dogs.txt')
+
+#Modify above code so that it does not print and error rather passes on it
+
+
+def read(file):
+    try:
+        with open(file) as file:
+            content = file.read()
+    except FileNotFoundError:
+        #The pass keyword ignores that there is an error and not interrupt the flow of the program
+        pass
+    else:
+        print(content)
+
+#Common words: Get text from gutenberg.org and find a few text you'd like to analyze. Write a program that reads the files and determines how many times the word 'the' appears in each text. Also try ' the ' with spaces to get a more accurate count or space before and after to get most accurate results
+
+
+#My code works but does not work as expected. Could use some touching up to work like the block of code below
+file = 'apology.txt'
+
+the = 'the'
+count = 0
+with open(file) as file:
+    contents = file.readlines()
+    for line in contents:
+        for the in line:
+            count += 1
+    print(count)    
+
+
+#This works but not with words that are set in variables. Far off
+file = 'apology.txt'
+def count_word(book, word):
+    with open(book, encoding = 'utf-8') as file:
+        lines = file.read()
+        count = lines.lower().count(word)
+        print(count)
+
+count_word(file, ' the ')
