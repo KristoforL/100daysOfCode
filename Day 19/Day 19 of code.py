@@ -38,4 +38,3 @@ def get_number():
         print(f'I know your favorite number. It is {number}')
 
 get_number()
-
