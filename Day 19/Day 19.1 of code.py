@@ -6,7 +6,6 @@
 
 #Verify-User Remeber_me.py aassumes either that the user has enetered their username or that the program is running for the first time. We should modify it in case the current user isnt the last person to login. Before Greeting the user ask if this is the correct username. If not call get_new_user to get correct username
 
-
 import json
 
 def get_stored_username():
@@ -26,16 +25,16 @@ def greet_user():
     else:
         username = input('What is your name?\n')
         filename = 'username.json'
-        with open(filename) as f:
+        with open(filename, 'w') as f:
             json.dump(username, f)
             print(f'We will remember your next time {username}')
 
 def get_new_username():
     username= input('What is your name?\n')
     file = 'username.json'
-    with open(file) as f:
+    with open(file, 'w') as f:
         json.dump(username, f)
-        return username
+    return username
 
 def greet_user():
     username = get_stored_username()
@@ -50,3 +49,5 @@ def greet_user():
 
 
 greet_user()
+get_stored_username()
+get_new_username()
