@@ -8,7 +8,9 @@
 
 def city_country(city, country):
     formatted = f'{city.title()}, {country.title()}'
-    print(formatted)
+    #print(formatted)
+    #Use print for in code testing and return for unittesting
+    return formatted
 
 
 #city_country('madrid', 'spain')
@@ -18,6 +20,7 @@ def city_country_pop(city, country, population=''):
         formatted = f'{city.title()}, {country.title()}: {population}'
     else:
         formatted = f'{city.title()}, {country.title()}'
-    print(formatted)
+    #print(formatted)
+    return formatted
 
 #city_country_pop('madrid', 'spain', 50000)
