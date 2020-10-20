@@ -14,14 +14,38 @@ import datetime
 year = datetime.date.today().year
 
 #Created a fucntion that gathers the age from the user and then does some math to findout what year they would turn 100
+#Extras
+#Add on to the previous program by asking the user for another number and printing out that many copies of the previous message. (Hint: order of operations exists in Python)
+#Print out that many copies of the previous message on separate lines. (Hint: the string "\n is the same as pressing the ENTER button)
+
 def Century_years():
     """Tells you what year you will be 100 in"""
     #Ask for users age
+    name = input('What is your name?\n')
     age = input('What is your age?\n')
     #Converts the string age to an integer
     age = int(age)
     #Subtracts the age from 100 and then adds it to the current year
     century_year=(100-age)+year
-    print(f'You will be 100 in year {century_year}')
+    info = f'{name} will be 100 in year {century_year}'
+    print(info)
 
+    #Extras
+    #Gathers information about the number of times the message should print
+    x=0
+    count = input('How many times do you want to see that message?\n')
+    #Converts count to integer
+    count = int(count)
+    #While loop to print the previous statement as many times as indicated
+    while x < count:
+        print(info)
+        x+=1
+    
 #Century_years()
+
+
+#Ask the user for a number. Depending on whether the number is even or odd, print out an appropriate message to the user. Hint: how does an even / odd number react differently when divided by 2?
+
+#Extras:
+#If the number is a multiple of 4, print out a different message.
+#Ask the user for two numbers: one number to check(call it num) and one number to divide by(check). If check divides evenly into num, tell that to the user. If not, print a different appropriate message.
