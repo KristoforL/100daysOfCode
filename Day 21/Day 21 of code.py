@@ -49,3 +49,30 @@ def Century_years():
 #Extras:
 #If the number is a multiple of 4, print out a different message.
 #Ask the user for two numbers: one number to check(call it num) and one number to divide by(check). If check divides evenly into num, tell that to the user. If not, print a different appropriate message.
+
+def even_odd():
+    number = input('Put in a number\n')
+    number = int(number)
+    if number%2==0 and number%4==0:
+        print(f'{number} is even and a multiple of 4')
+    elif number%2==0:
+        print(f'{number} is even')
+    else:
+        print(f'{number} is odd')
+
+
+def divide():
+    num = input('Give me a number\n')
+    num = int(num)
+    check = input('Give me another number\n')
+    check = int(check)
+
+    try:
+        answer = num/check
+    except ZeroDivisionError:
+        print('Can not divide by zero')
+    else:
+        print(answer)
+
+even_odd()
+divide()
