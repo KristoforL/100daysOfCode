@@ -68,3 +68,9 @@ def randomListCompare():
     print(f"All elements that are in both list\n{c}")
 
 randomListCompare()
+
+#How do they put all of this into one line of code?
+
+print("Single Line execution")
+#Still prints double numbers though
+print([number for number in a if number in b])
