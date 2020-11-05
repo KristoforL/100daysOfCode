@@ -23,11 +23,24 @@ def palindrome():
 
     #Compares the list and if they are the same it is a palindrome. Otherwise it is not and is shown the reverse order
     if newWord == backwards:
-        print(f"{word.title()} is a palindrome")
+        print(f"{word.title()} is a palindrome\nIt is spelled the same way both forward and reverse")
+        for item in newWord:
+            print(f"{item}", end =" ")
     else:
-        print(f"{word.title()} is not a palindrome")
+        print(f"{word.title()} is not a {word.title()} backwards. It is spelled backwards below:")
         for item in backwards:
-            print(f"{item}",end="")
+            print(f"{item}", end =" ")
 
 
-palindrome()
+#palindrome()
+
+
+
+# Let’s say I give you a list saved in a variable: a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]. Write one line of Python that takes this list a and makes a new list that has only the even elements of this list in it.
+
+a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+#Print the number for each number in the the list if it is even
+#Print each  number in the list if it is even
+#Take each number and divide by 2. If even print it
+print([number for number in a if number%2 == 0])
+
