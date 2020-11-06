@@ -12,3 +12,61 @@
 # Rock beats scissors
 # Scissors beats paper
 # Paper beats rock
+
+import random
+
+def rps():
+    """Playing a game of rock paper scissors"""
+    #Keeping count of who won
+    win = 0
+    loss = 0
+
+    #Computer chooses random number for rock paper scissors
+    comp = random.randint(1,101)
+    throw = ""
+    if comp > 0 and comp <= 33:
+        throw = "rock"
+    elif comp > 33 and comp <= 66:
+        throw = "paper"
+    elif comp > 66 and comp <= 100:
+        throw = "scissors"
+
+    #Checking to see if the random is randomS
+    print(comp)
+    print(throw)
+
+    choose = input("Rock, Paper, or Scissors:\n")
+    if choose.lower() == "rock":   
+        #Throwing Rock
+        if choose.lower() == "rock" and throw == "scissors":
+            print("Computer threw scissors. You win")      
+        elif choose.lower() == "rock" and throw == "paper":
+            print("Computer threw paper. You lose")
+        elif choose.lower() == "rock" and throw == "rock":
+            print("Computer threw rock. It's a draw")
+
+    elif choose.lower() == "paper":
+        #Throwing Paper
+        if choose.lower() == "paper" and throw == "rock":
+            print("Computer threw rock. You win")      
+        elif choose.lower() == "paper" and throw == "scissors":
+            print("Computer threw scissors. You lose")
+        elif choose.lower() == "paper" and throw == "paper":
+            print("Computer threw paper. It's a draw")
+
+    elif choose.lower() == "scissors":
+        #Throwing Scissors
+        if choose.lower() == "scissors" and throw == "paper":
+            print("Computer threw paper. You win")      
+        elif choose.lower() == "scissors" and throw == "rock":
+            print("Computer threw rock. You lose")
+        elif choose.lower() == "scissors" and throw == "scissors":
+            print("Computer threw scissors. It's a draw")
+
+    elif choose.lower() == "q":
+            print("Game over")
+            #break
+    else:
+        print("Please use rock paper or scissors only")   
+
+rps()
