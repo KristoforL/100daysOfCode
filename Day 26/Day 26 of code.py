@@ -14,6 +14,8 @@
 # Paper beats rock
 
 import random
+#This allows commands to be used to clear the terminal so that that player two can input their choice.
+import os
 
 def rps():
     """Playing a game of rock paper scissors"""
@@ -36,6 +38,10 @@ def rps():
     print(throw)
 
     choose = input("Rock, Paper, or Scissors:\n")
+    #This is what I mean in import os
+    os.system('cls')
+
+
     if choose.lower() == "rock":   
         #Throwing Rock
         if choose.lower() == "rock" and throw == "scissors":
