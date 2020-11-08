@@ -22,6 +22,7 @@ def rps():
     #Keeping count of who won
     win = 0
     loss = 0
+    draw = 0
 
     #Computer chooses random number for rock paper scissors
     comp = random.randint(1,101)
@@ -42,39 +43,50 @@ def rps():
     os.system('cls')
     
 
+    while True:
 
-    if choose.lower() == "rock":   
-        #Throwing Rock
-        if choose.lower() == "rock" and throw == "scissors":
-            print("Computer threw scissors. You win")      
-        elif choose.lower() == "rock" and throw == "paper":
-            print("Computer threw paper. You lose")
-        elif choose.lower() == "rock" and throw == "rock":
-            print("Computer threw rock. It's a draw")
+        if choose.lower() == "rock":   
+            #Throwing Rock
+            if choose.lower() == "rock" and throw == "scissors":
+                print("Computer threw scissors. You win")
+                win += 1   
+            elif choose.lower() == "rock" and throw == "paper":
+                print("Computer threw paper. You lose")
+                lose += 1
+            elif choose.lower() == "rock" and throw == "rock":
+                print("Computer threw rock. It's a draw")
+                draw += 1
 
-    elif choose.lower() == "paper":
-        #Throwing Paper
-        if choose.lower() == "paper" and throw == "rock":
-            print("Computer threw rock. You win")      
-        elif choose.lower() == "paper" and throw == "scissors":
-            print("Computer threw scissors. You lose")
-        elif choose.lower() == "paper" and throw == "paper":
-            print("Computer threw paper. It's a draw")
+        elif choose.lower() == "paper":
+            #Throwing Paper
+            if choose.lower() == "paper" and throw == "rock":
+                print("Computer threw rock. You win")
+                win += 1      
+            elif choose.lower() == "paper" and throw == "scissors":
+                print("Computer threw scissors. You lose")
+                lose += 1
+            elif choose.lower() == "paper" and throw == "paper":
+                print("Computer threw paper. It's a draw")
+                draw += 1
 
-    elif choose.lower() == "scissors":
-        #Throwing Scissors
-        if choose.lower() == "scissors" and throw == "paper":
-            print("Computer threw paper. You win")      
-        elif choose.lower() == "scissors" and throw == "rock":
-            print("Computer threw rock. You lose")
-        elif choose.lower() == "scissors" and throw == "scissors":
-            print("Computer threw scissors. It's a draw")
+        elif choose.lower() == "scissors":
+            #Throwing Scissors
+            if choose.lower() == "scissors" and throw == "paper":
+                print("Computer threw paper. You win")
+                win += 1      
+            elif choose.lower() == "scissors" and throw == "rock":
+                print("Computer threw rock. You lose")
+                lose += 1
+            elif choose.lower() == "scissors" and throw == "scissors":
+                print("Computer threw scissors. It's a draw")
+                draw += 1
 
-    elif choose.lower() == "q":
-            print("Game over")
-            #break
-    else:
-        print("Please use rock paper or scissors only")   
+        elif choose.lower() == "q":
+                print("Game over")
+                print(f"P1\nW: {win}\nL: {loss}\nDraw: {draw}")
+                break
+        else:
+            print("Please use rock paper or scissors only")   
 
 #Multiplayer Rock paper scissors
 def rps2player():
@@ -142,4 +154,4 @@ def rps2player():
 
 
 #rps()
-rps2player()
+#rps2player()
