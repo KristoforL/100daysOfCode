@@ -40,6 +40,7 @@ def rps():
     choose = input("Rock, Paper, or Scissors:\n")
     #This is what I mean in import os
     os.system('cls')
+    
 
 
     if choose.lower() == "rock":   
@@ -75,4 +76,70 @@ def rps():
     else:
         print("Please use rock paper or scissors only")   
 
-rps()
+#Multiplayer Rock paper scissors
+def rps2player():
+    """Playing a game of rock paper scissors with a friend"""
+    #Keeping count of who won
+    p1w = 0
+    p2w = 0
+    draws = 0
+
+    #Loops through the game so there can be a
+    while True:
+        p1 = input("Player 1\nR = Rock, P = Paper, S = Scissors, Q = quit\n")
+        #This is what I mean in import os
+        os.system('cls')
+        p2 = input("Player 2\nR = Rock, P = Paper, S = Scissors, Q = quit\n")
+        
+        #Checks to see who won each round and adds to the score
+        if p1.lower() == "r":   
+            #Throwing Rock
+            if p1.lower() == "r" and p2.lower() == "s":
+                print("Player 1 wins")  
+                p1w += 1
+            elif p1.lower() == "r" and p2.lower() == "p":
+                print("Player 2 wins")
+                p2w += 1
+            elif p1.lower() == "r" and p2.lower() == "r":
+                print("It's a draw")
+                draws += 1
+
+        elif p1.lower() == "p":
+            #Throwing Paper
+            if p1.lower() == "p" and p2.lower() == "r":
+                print("Player 1  wins")
+                p1w += 1
+            elif p1.lower() == "p" and p2.lower() == "s":
+                print("Player 2 wins")
+                p2w += 1
+            elif p1.lower() == "p" and p2.lower() == "p":
+                print("It's a draw")
+                draws += 1
+
+        elif p1.lower() == "s":
+            #Throwing Scissors
+            if p1.lower() == "s" and p2.lower() == "p":
+                print("Player 1 wins")
+                p1w += 1      
+            elif p1.lower() == "s" and p2.lower() == "r":
+                print("Player 2 winss")
+                p2w += 1
+            elif p1.lower() == "s" and p2.lower() == "s":
+                print("It's a draw")
+                draws += 1
+
+        #Checks if anyone quit the game and returns the scores
+        if p1.lower() == "q":
+                print("Game over")
+                print(f"Player 1 wins: {p1w}\nPlayer 2 wins: {p2w}\nDraws: {draws}")
+                break
+        elif p2.lower() == "q":
+                print("Game over")
+                print(f"Player 1 wins: {p1w}\nPlayer 2 wins: {p2w}\nDraws: {draws}")
+                break     
+        else:
+            print("Please use rock paper or scissors only")   
+
+
+#rps()
+rps2player()
