@@ -21,8 +21,11 @@ tried = 0
 
 
 while True:
-    guess = input("Guess the number between 1 and 10 including both 1 and 10:\n")
-    guess = int(guess)
+    guess = input("Guess the number between 1 and 10 including both 1 and 10. Q to leave:\n")
+    if guess.lower == 'q':
+        break
+    else:
+        guess = int(guess)
     
     if guess in used:
         print(f"You already guessed {guess}. Try again\n")
