@@ -10,3 +10,36 @@
 
 # Keep the game going until the user types “exit”
 # Keep track of how many guesses the user has taken, and when the game ends, print this out.
+
+import random
+
+ans = random.randint(1,10)
+#checking the random
+print(ans)
+used = []
+tried = 0
+
+
+while True:
+    guess = input("Guess the number between 1 and 10 including both 1 and 10:\n")
+    guess = int(guess)
+    
+    if guess in used:
+        print(f"You already guessed {guess}. Try again\n")
+        used.append(guess)
+        tried+=1
+    else:
+        if guess == ans:
+            print(f"Aye you got it! The number is {guess}.\nIt only took you {tried} tries.\nYour guess in order were {used}")
+
+            break
+        elif guess > ans:
+            print("Sorry that is too high. Try again\n")
+            used.append(guess)
+            tried += 1
+        else:
+            print("Sorry that is too low. Try again\n")
+            used.append(guess)
+            tried += 1
+            
+
