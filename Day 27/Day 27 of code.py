@@ -44,5 +44,4 @@ while True:
             print("Sorry that is too low. Try again\n")
             used.append(guess)
             tried += 1
-            
-
+ 
