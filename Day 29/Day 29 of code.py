@@ -24,9 +24,24 @@ b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
 common = []
 
+#This will take the list and print the common items in each list with not duplicates
 for item in a:
     if item in b and item not in common:
         common.append(item)
-
-
 print(f"The common items in the list are:\n{[number for number in common]}")
+
+
+#This program will take in two list and return the common items in both with no duplicates. Based off the simple function above.
+def alike(list1, list2):
+    """This will check and return the list items that are the same"""
+    common = []
+    
+    for item in list1:
+        if item in list2 and item not in common:
+            common.append(item)
+
+    print(f"The common items in the taken list are:\n{[number for number in common]}")
+
+#Must call this function for it to be printed out.
+#alike(a,b)
+
