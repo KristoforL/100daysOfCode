@@ -28,7 +28,7 @@ common = []
 for item in a:
     if item in b and item not in common:
         common.append(item)
-print(f"The common items in the list are:\n{[number for number in common]}")
+print(f"The common items in the list are:\n{[number for number in common]}\n")
 
 
 #This program will take in two list and return the common items in both with no duplicates. Based off the simple function above.
@@ -40,8 +40,42 @@ def alike(list1, list2):
         if item in list2 and item not in common:
             common.append(item)
 
-    print(f"The common items in the taken list are:\n{[number for number in common]}")
+    print(f"The common items in the taken list are:\n{[number for number in common]}\n")
 
 #Must call this function for it to be printed out.
-#alike(a,b)
+alike(a,b)
 
+
+#Imported the random class so that I can generate random numbers for the list and the length of the list
+import random
+
+def makingList():
+    """This will check and return the list items that are the same"""
+    
+    #This section will generate a random number for the list length and append random numbers between 1 and 11 including 1 to the list
+    a = random.randint(1,21)
+    listA = []
+    while a >= 1:
+        listA.append(random.randint(1,11))
+        a -= 1
+    
+    b = random.randint(1,11)
+    listB = []
+    while  b >= 1:
+        listB.append(random.randint(1,11))
+        b -= 1
+
+    #This is a list to add common items to call back later
+    #I could just print them out as the are recognized but in case this needs to be printed out else where we will just return the list.
+    common = []
+
+    for item in listA:
+        if item in listB and item not in common:
+            common.append(item)
+
+    #Can be written in both ways and it will return the same out put. One is just to read with less characters
+    print(f"The first list is:\n{listA}\nThe second list is:\n{listB}\nThe common items in the taken list are:\n{[number for number in common]}\n")
+    #print(f"The first list is:\n{listA}\nThe second list is:\n{listB}\nThe common items in the taken list are:\n{common}")
+
+
+makingList()
