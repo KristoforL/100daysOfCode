@@ -8,7 +8,7 @@ class AlienInvasion:
         """Initialize the game and create resources."""
         pg.init()
         self.screen = pg.display.set_mode((1200, 800))
-        pg.displayset_caption("Alien Invasion")
+        pg.display.set_caption("Alien Invasion")
 
     def run_game(self):
         """Start the main loop for the game"""
