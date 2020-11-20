@@ -1,0 +1,9 @@
+This is further practive python and move further ahead in the no scratch python book.
+
+Starting Part 2 with the projects and the first one is a space invaders game.
+
+Overall goal is to make space invasion game like many people know. There will be a ship that can move left and right and shoot laser. There will be invaders that are shooting down toward the ship. If invaders make to the bottom or destroy the ship they win and continue until all the ships are are. If the ship destroys all the invaders then the next round will start and the invaders will be moving faster. 
+
+So the first thing we want to do is create a ship that can move from left to right and shoot using the arrow keys and space bar
+
+
