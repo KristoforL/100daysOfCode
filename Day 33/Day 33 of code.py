@@ -10,23 +10,24 @@
 #Set global the liat to append to.
 fibList = []
 
-sets the function to the 
+#Sets the function to the create the list
 def fib():
     """Generates list of fibonnaci numbers the length of the parameter given"""
     number = int(input("How many Fibonnaci numbers do you want to see:\n"))
     count = 1
     
+    #Checks the number to see if it is 0 or 1 because I learned that the when setting up fib sequence the negative numbers is not ignored
     if number == 0:
         fibList = []
-    elif number == 1:
+    elif number == 1: #The first number in the sequence is 1 so the two numbers before would be negative
         fibList == [1]
-    elif number == 2:
+    elif number == 2: #Starts list at 1, 1 so the number can be added together and continue the sequence
         fibList == [1,1]
     elif number > 2:
         fibList = [1,1]
-        while count < (number-1):
+        while count < (number-1): #Checks the count at a range less than the number asked because the sequece we have will end at the number is asked for
             fibList.append(fibList[count] + fibList[count-1])
             count += 1
-    return fibList
+    return fibList #Returns the list to end the program
 
 print(fib())
