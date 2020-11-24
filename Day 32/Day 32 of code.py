@@ -5,3 +5,16 @@
 # I have gotten some of these practice problems from https://www.practicepython.org/exercise/2014/01/29/01-character-input.html
 
 #Write a program that takes a list of numbers (for example, a = [5, 10, 15, 20, 25]) and makes a new list of only the first and last elements of the given list. For practice, write this code inside a function.
+
+a = [5, 10, 15, 20, 25]
+
+def first_last(list):
+    """"Takes first and last element from a list and make a new list"""
+    firstLast = []
+    firstLast.append(list[0])
+    firstLast.append(list[-1])
+    
+    print(firstLast)
+    return firstLast
+
+first_last(a)
