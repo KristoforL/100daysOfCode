@@ -1,6 +1,8 @@
 While I am working on this game I will be having folders like this with practice problems from it
 
 Todays assignments are:
-Make a pygame window with a blue background
+Make a pygame window with a blue background:
+-Completed this
 
 Fit a bitmap image of a game character I like or covert an image to a bitmap. Make a class that draws the character at the center of the screen and match the backgroun color of the image to the background color of the screen or vice versa
+-Looking through images that I may want to use

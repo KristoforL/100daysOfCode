@@ -55,7 +55,7 @@ class AlienInvasion:
 
     
 if __name__ == '__main__':
-    #Mkae a game instace, and run the game
+    #Make a game instace, and run the game
     ai = AlienInvasion()
     ai.run_game()
     
