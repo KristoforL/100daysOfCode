@@ -7,3 +7,5 @@ Overall goal is to make space invasion game like many people know. There will be
 - So the first thing we want to do is create a ship that can move from left to right and shoot using the arrow keys and space bar
 
 
+In making a game this is there is a website that has the free license images to use:
+https://pixabay.com/illustrations/search/ships/?pagi=3
