@@ -63,6 +63,7 @@ class AlienInvasion:
         self.ship.blitme()
         #Make the most recently drawn screen visible.
         pg.display.flip()
+        
 
     
 if __name__ == '__main__':
