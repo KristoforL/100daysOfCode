@@ -6,3 +6,4 @@ Make a pygame window with a blue background:
 
 Fit a bitmap image of a game character I like or covert an image to a bitmap. Make a class that draws the character at the center of the screen and match the backgroun color of the image to the background color of the screen or vice versa
 -Looking through images that I may want to use
+- Found an image and imported it. I see that it is pretty sizeable though and I am going to look into resizing it later. 
