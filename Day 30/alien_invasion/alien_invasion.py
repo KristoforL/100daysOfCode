@@ -25,6 +25,7 @@ class AlienInvasion:
         """Start the main loop for the game"""
         while True:
             self._check_events()
+            self.ship.update()
             self._update_screen()
 
             # #Watch for keyboard and mouse events
@@ -44,6 +45,16 @@ class AlienInvasion:
         for event in pg.event.get():
             if event.type == pg.QUIT:
                 sys.exit()
+            elif event.type == pg.KEYDOWN:
+                if event.key == pg.K_RIGHT:
+                    self.ship.moving_right = True
+                elif event.key == pg.K_LEFT:
+                    self.ship.moving_left = True
+            elif event.type == pg.KEYUP:
+                if event.key == pg.K_RIGHT:
+                    self.ship.moving_right = False
+                elif event.key == pg.K_LEFT:
+                    self.ship.moving_left = False
 
     def _update_screen(self):
         """Update images on the screen, and flip to the new screen."""
