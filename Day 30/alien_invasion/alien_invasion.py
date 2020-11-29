@@ -16,28 +16,12 @@ class AlienInvasion:
         pg.display.set_caption("Alien Invasion")
         self.ship = Ship(self) 
 
-    #The below is placed in the settings.py so that it can be better managed
-        #self.screen = pg.display.set_mode((1200, 800))
-        #Set background color
-        #self.bg_color = (230, 230, 230)
-
     def run_game(self):
         """Start the main loop for the game"""
         while True:
             self._check_events()
             self.ship.update()
             self._update_screen()
-
-            # #Watch for keyboard and mouse events
-            # for event in pg.event.get():
-            #     if event.type == pg.QUIT:
-            #         sys.exit()
-
-            # #Redraw the screen during each pass through
-            # self.screen.fill(self.settings.bg_color)
-            # self.ship.blitme()
-            # #Make the most recently drawn screen visible.
-            # pg.display.flip()
 
     def _check_events(self):
         """Respond to keypresses and mouse events."""
@@ -46,15 +30,24 @@ class AlienInvasion:
             if event.type == pg.QUIT:
                 sys.exit()
             elif event.type == pg.KEYDOWN:
-                if event.key == pg.K_RIGHT:
-                    self.ship.moving_right = True
-                elif event.key == pg.K_LEFT:
-                    self.ship.moving_left = True
+                self._check_keydown_events(event)
             elif event.type == pg.KEYUP:
-                if event.key == pg.K_RIGHT:
-                    self.ship.moving_right = False
-                elif event.key == pg.K_LEFT:
-                    self.ship.moving_left = False
+                self._check_keyup_events(event)
+
+    def _check_keydown_events(self, event):
+        #Responds to keypresses
+        if event.key == pg.K_RIGHT:
+            self.ship.moving_right = True
+        elif event.key == pg.K_LEFT:
+            self.ship.moving_left = True
+
+    def _check_keyup_events(self, event):
+        #Responds to Key release
+        if event.key == pg.K_RIGHT:
+            self.ship.moving_right = False
+        elif event.key == pg.K_LEFT:
+            self.ship.moving_left = False
+
 
     def _update_screen(self):
         """Update images on the screen, and flip to the new screen."""
