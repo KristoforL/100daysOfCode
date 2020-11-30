@@ -12,6 +12,7 @@ class AlienInvasion:
         """Initialize the game and create resources."""
         pg.init()
         self.settings = Settings()
+        
         self.screen = pg.display.set_mode((0, 0), pg.FULLSCREEN) 
         self.settings.screen_width = self.screen.get_rect().width
         self.settings.screen_height = self.screen.get_rect().height
@@ -45,9 +46,9 @@ class AlienInvasion:
             self.ship.moving_right = True
         elif event.key == pg.K_LEFT:
             self.ship.moving_left = True
-        elif event.type == pg.K_q:
+        elif event.key == pg.K_q:
             sys.exit()
-        elif event.type == pg.K_SPACE:
+        elif event.key == pg.K_SPACE:
             self._fire_bullet()
 
         
