@@ -98,7 +98,6 @@ class AlienInvasion:
         #Make the most recently drawn screen visible.
         pg.display.flip()
         
-
     
 if __name__ == '__main__':
     #Make a game instace, and run the game
