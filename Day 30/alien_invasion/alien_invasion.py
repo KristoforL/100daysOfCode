@@ -83,7 +83,7 @@ class AlienInvasion:
         """Create a fleet of aliens"""
         #Make an alien
         alien = Alien(self)
-        self.aliens.add(alien)
+        self.alien.add(alien)
 
 
 
@@ -94,7 +94,7 @@ class AlienInvasion:
         self.ship.blitme()
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()
-        self.aliens.draw(self, screen)
+        self.alien.draw(self.screen)
         #Make the most recently drawn screen visible.
         pg.display.flip()
         
