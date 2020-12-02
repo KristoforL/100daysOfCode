@@ -17,7 +17,6 @@ class AlienInvasion:
         """Initialize the game and create resources."""
         pg.init()
         self.settings = Settings()
-
         
         self.screen = pg.display.set_mode((0, 0), pg.FULLSCREEN) 
         self.settings.screen_width = self.screen.get_rect().width
@@ -43,8 +42,8 @@ class AlienInvasion:
                 self.ship.update()
                 self._update_bullets()
                 self._update_aliens()
-            
-                self._update_screen()
+            #If not indented the screen will not show and you will only see black
+            self._update_screen()
 
     def _check_events(self):
         """Respond to keypresses and mouse events."""
@@ -52,13 +51,13 @@ class AlienInvasion:
         for event in pg.event.get():
             if event.type == pg.QUIT:
                 sys.exit()
-            elif event.type == pg.MOUSEBUTTONDOWN:
-                mouse_pos =pg.mouse.get_pos()
-                self._check_play_button(mouse_pos)
             elif event.type == pg.KEYDOWN:
                 self._check_keydown_events(event)
             elif event.type == pg.KEYUP:
                 self._check_keyup_events(event)
+            elif event.type == pg.MOUSEBUTTONDOWN:
+                mouse_pos =pg.mouse.get_pos()
+                self._check_play_button(mouse_pos)
 
     def _check_play_button(self, mouse_pos):
         """Starts a new game when the player clicks play"""
@@ -67,8 +66,6 @@ class AlienInvasion:
             #Reset thje game statistics
             self.stats.reset_stats()
             self.stats.game_active = True
-            #Hide the mouse cursor
-            pg.mouse.set_cisible(False)
 
             #Get rid of any remaining aliens and bullets
             self.aliens.empty()
@@ -77,6 +74,9 @@ class AlienInvasion:
             #Create a new fleet and center the ship
             self._create_fleet()
             self.ship.center_ship()
+
+            #Hide the mouse cursor
+            pg.mouse.set_visible(False)
 
 
     def _check_keydown_events(self, event):
@@ -114,7 +114,6 @@ class AlienInvasion:
                 self.bullets.remove(bullet)
         
         self._check_bullet_alien_collision()
-
         
 
     def _check_bullet_alien_collision(self):
@@ -141,7 +140,18 @@ class AlienInvasion:
         #Look for aliens hitting the botom of the screen
         self._check_alien_bottom()
 
+
     
+    def _check_alien_bottom(self):
+        """Check if any aliens have reacehed the bottom of the screen"""
+        screen_rect = self.screen.get_rect()
+        for alien in self.aliens.sprites():
+            if alien.rect.bottom >= screen_rect.bottom:
+                #Treat this the same as if the ship got hit
+                self._ship_hit()
+                break
+
+
     def _ship_hit(self):
         """Responds to the ship being hit by an alien"""
         
@@ -163,23 +173,12 @@ class AlienInvasion:
             self.stats.game_active = False
             pg.mouse.set_visible(True)
 
-    
-    def _check_alien_bottom(self):
-        """Check if any aliens have reacehed the bottom of the screen"""
-        screen_rect = self.screen.get_rect()
-        for alien in self.aliens.sprites():
-            if alien.rect.bottom >= screen_rect.bottom:
-                #Treat this the same as if the ship got hit
-                self._ship_hit()
-                break
-
-
     def _create_fleet(self):
         """Create a fleet of aliens"""
         #Spacing between each alien is equal to one alien width
         alien = Alien(self)
         alien_width, alien_height = alien.rect.size
-        alien_width = alien.rect.width
+        #alien_width = alien.rect.width
         available_space_x = self.settings.screen_width - (2 * alien_width)
         number_aliens_x = available_space_x // (2 * alien_width)
 
