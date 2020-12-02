@@ -5,6 +5,7 @@ import pygame as pg
 
 from settings import Settings
 from game_stats import GameStats
+from button import Button
 from ship import Ship
 from bullet import Bullet
 from alien import Alien
@@ -16,6 +17,7 @@ class AlienInvasion:
         """Initialize the game and create resources."""
         pg.init()
         self.settings = Settings()
+
         
         self.screen = pg.display.set_mode((0, 0), pg.FULLSCREEN) 
         self.settings.screen_width = self.screen.get_rect().width
@@ -29,6 +31,9 @@ class AlienInvasion:
         self.aliens = pg.sprite.Group()
 
         self._create_fleet()
+
+        #Make the play button
+        self.play_button=Button(self, "Play")
 
     def run_game(self):
         """Start the main loop for the game"""
@@ -47,10 +52,32 @@ class AlienInvasion:
         for event in pg.event.get():
             if event.type == pg.QUIT:
                 sys.exit()
+            elif event.type == pg.MOUSEBUTTONDOWN:
+                mouse_pos =pg.mouse.get_pos()
+                self._check_play_button(mouse_pos)
             elif event.type == pg.KEYDOWN:
                 self._check_keydown_events(event)
             elif event.type == pg.KEYUP:
                 self._check_keyup_events(event)
+
+    def _check_play_button(self, mouse_pos):
+        """Starts a new game when the player clicks play"""
+        button_clicked = self.play_button.rect.collidepoint(mouse_pos)
+        if button_clicked and not self.stats.game_active:
+            #Reset thje game statistics
+            self.stats.reset_stats()
+            self.stats.game_active = True
+            #Hide the mouse cursor
+            pg.mouse.set_cisible(False)
+
+            #Get rid of any remaining aliens and bullets
+            self.aliens.empty()
+            self.bullets.empty()
+
+            #Create a new fleet and center the ship
+            self._create_fleet()
+            self.ship.center_ship()
+
 
     def _check_keydown_events(self, event):
         #Responds to keypresses
@@ -134,6 +161,7 @@ class AlienInvasion:
             sleep(0.5)
         else:
             self.stats.game_active = False
+            pg.mouse.set_visible(True)
 
     
     def _check_alien_bottom(self):
@@ -198,6 +226,11 @@ class AlienInvasion:
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()
         self.aliens.draw(self.screen)
+
+        #Draw the play button if the game is inactive
+        if not self.stats.game_active:
+            self.play_button.draw_button()
+
         #Make the most recently drawn screen visible.
         pg.display.flip()
         
