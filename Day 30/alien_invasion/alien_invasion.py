@@ -26,7 +26,7 @@ class AlienInvasion:
 
         #Create an instance to store game statistics and create a scoreboard
         #Create and instance to store game stats
-        self.stats=GameStats(self)
+        self.stats = GameStats(self)
         self.sb = Scoreboard(self)
 
         self.ship = Ship(self) 
@@ -43,6 +43,7 @@ class AlienInvasion:
         """Start the main loop for the game"""
         while True:
             self._check_events()
+
             if self.stats.game_active:
                 self.ship.update()
                 self._update_bullets()
@@ -62,7 +63,7 @@ class AlienInvasion:
             elif event.type == pg.KEYUP:
                 self._check_keyup_events(event)
             elif event.type == pg.MOUSEBUTTONDOWN:
-                mouse_pos =pg.mouse.get_pos()
+                mouse_pos = pg.mouse.get_pos()
                 self._check_play_button(mouse_pos)
 
 
@@ -128,10 +129,10 @@ class AlienInvasion:
             if bullet.rect.bottom <= 0:
                 self.bullets.remove(bullet)
         
-        self._check_bullet_alien_collision()
+        self._check_bullet_alien_collisions()
         
 
-    def _check_bullet_alien_collision(self):
+    def _check_bullet_alien_collisions(self):
         """Responds to bullet-alien collision"""
         #Remove any bullets and aliens that have collided
         #Check for any bullets that have hit aliens.
@@ -151,7 +152,7 @@ class AlienInvasion:
             self.settings.increase_speed()
 
             #Increase level
-            self.stats.level+= 1
+            self.stats.level += 1
             self.sb.prep_level()
 
 
@@ -187,7 +188,7 @@ class AlienInvasion:
 
             #Get rid of any remianing aliens and bullets
             self.aliens.empty()
-            self.bullets.empty
+            self.bullets.empty()
 
             #Create a new fleet and center the ship
             self._create_fleet()
@@ -266,7 +267,7 @@ class AlienInvasion:
     
 if __name__ == '__main__':
     #Make a game instace, and run the game
-    ai = AlienInvasion()
+    ai = AlienInvasion()   
     ai.run_game()
     
 
