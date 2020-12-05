@@ -13,9 +13,9 @@ class Ship(Sprite):
 
 
         #Load the ship image and get its rect.
-        #self.image = pg.image.load('Day 30\images\ship.bmp')
+        self.image = pg.image.load('images/ship.bmp')
         #For mac users
-        self.image = pg.image.load('Day 30/images/ship.bmp')
+        #self.image = pg.image.load('Day 30/images/ship.bmp')
         self.rect = self.image.get_rect()
 
         #Start each new ship at the bottom center of the screen
