@@ -15,3 +15,6 @@ import random
 #Currently thinking about how to go about this
 #Do I create multiple list for the the character combinations or can I use the hexidemcials in some way to generate a random password
 
+#First method will be to create a list of all characters possible and ask the user for a length they want the password to be and they do no provide it, then it will be 8 by default
+
+#I will try this out later tonight
