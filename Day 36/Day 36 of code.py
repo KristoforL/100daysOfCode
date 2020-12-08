@@ -9,3 +9,9 @@
 # Extra:
 
 # Ask the user how strong they want their password to be. For weak passwords, pick a word or two from a list.
+
+import random
+
+#Currently thinking about how to go about this
+#Do I create multiple list for the the character combinations or can I use the hexidemcials in some way to generate a random password
+
