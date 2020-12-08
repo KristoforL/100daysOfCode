@@ -11,3 +11,15 @@
 # Write two different functions to do this - one using a loop and constructing a list, and another using sets.
 # Go back and do Exercise 5 using sets, and write the solution for that in a different function.
 
+original = [1,1,2,4,5,5,7,3,3,3,2,2,4,5,6,7,2,2,4,2,5,3,6,3,3,6,7,75,4,74,245,673,75]
+new = []
+
+def no_duplicates(lista):
+    """Takes in list and then appends all none duplicates to the new list"""
+    for element in original:
+        if element not in new:
+            new.append(element)
+    
+    print(f"The list with no duplicates is below:\n{new}")
+
+no_duplicates(original)
