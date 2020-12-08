@@ -12,3 +12,25 @@
 #   Michele is name My
 # shown back to me.
 
+def reverser():
+    """Reverses whatever the user inputs"""
+    string = input("Type in something and I will print it in reverse:\n")
+
+    #Splits the string into an array of words where there is a space
+    split = string.split()
+
+    #An empty string for reversing the string
+    reverse = []
+
+    #Loop that will take elevery element in the split list and appends it to the 0th index so the string is put in reverse state
+    for item in split:
+        reverse.insert(0, item)
+    
+    #Joins the list with a space so the list is now a string
+    joined = " ".join(reverse)
+
+    print(joined)
+
+reverser()
+
+#This works but would not work if the user has punctuation in it
