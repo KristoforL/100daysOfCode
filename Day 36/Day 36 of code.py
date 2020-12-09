@@ -12,9 +12,27 @@
 
 import random
 
-#Currently thinking about how to go about this
-#Do I create multiple list for the the character combinations or can I use the hexidemcials in some way to generate a random password
+#This is not my custom code but I have an understnading of how I should have gone about this
 
-#First method will be to create a list of all characters possible and ask the user for a length they want the password to be and they do no provide it, then it will be 8 by default
+#Created a string of all password option possiblities
+s = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?"
+#Ask how long the user wants their password to be and cast that to ta integer
+passlen = input("How long do you want your password?\n")
+passlen = int(passlen)
+#Join random samples from the list until thelength requirement is met
+p =  "".join(random.sample(s,passlen))
+#Prints the password for the user
+print(p)
 
-#I will try this out later tonight
+
+#Here is another way
+import string
+
+#literally does the same thing as above but combines all the numbers, letters and punction using the one variable:chars, with import string
+def pw_gen(size = 8, chars=string.ascii_letters + string.digits + string.punctuation):
+    #joins a random choice which is similar to sample for the size the default 8 character length
+	return ''.join(random.choice(chars) for _ in range(size))
+
+#This overwrites the default password length being 8 since there is an input in this string
+print(pw_gen(int(input('How many characters in your password?\n'))))
+print(pw_gen())
