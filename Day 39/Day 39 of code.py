@@ -11,6 +11,9 @@ with open(filename) as f:
     reader = csv.reader(f)
     header_row = next(reader)
 
+    for index, column_header in enumerate(header_row):
+        print(index, column_header)
+
     #Get dates and high temperatures from this tile
     dates, highs , lows= [], [], []
     for row in reader:
@@ -23,8 +26,7 @@ with open(filename) as f:
 
     print(highs)
 
-    # for index, column_header in enumerate(header_row):
-    #     print(index, column_header)
+
 
 
 
