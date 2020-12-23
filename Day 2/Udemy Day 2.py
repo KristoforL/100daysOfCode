@@ -91,8 +91,8 @@ age = input("What is your current age?\n")
 age = int(age)
 years = 90 - age
 months = years * 12
-weeks = months * 4
-days =  weeks * 7
+weeks = years * 52
+days =  years * 365
 
 
 print(f'You have\n{months} months\n{weeks} weeks\n{days} days\nleft until you are 90')
