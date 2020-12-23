@@ -8,7 +8,7 @@
 print('Welcome to the tip calculator!')
 cost = input("What is the bill amount?\n")
 people = input("How many people are paying?\n$")
-tip = input("What percentage tip do you want to leave? 10% 15% 18% 20% or what ever you'd like\n")
+tip = input("What percentage tip do you want to leave? 10 15 18 20 or custom amount\n")
 
 cost = float(cost)
 people = int(people)
