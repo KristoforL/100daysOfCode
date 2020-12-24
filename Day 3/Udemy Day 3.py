@@ -84,3 +84,64 @@ if year % 4 == 0:
         print('Leap year')
 else:
     print('Not leap Year')
+
+
+
+#Sometimes you will have to ask multiple things and to final results
+if height > 53:
+    age = int(input('How old are you?\n'))
+    bill = 0
+    if age < 12:
+        print('Price is $5')
+        bill = 5
+    elif age <=18:
+        print('Price is $7')
+        bill = 7
+    else:
+        print('Price is $12')
+        bill = 12
+
+    extra = input('Do you want a photo taken? y/N\n')
+    if extra == 'y':
+        bill+=3
+        print(f'You pay ${bill}')
+    else:
+        print(f'You pay ${bill}')
+
+else:
+    print('Sorry you have to wait until you are taller to ride')
+
+
+#Day 3 Challenge 4 wants me to make an auto pizza order program
+
+# 🚨 Don't change the code below 👇
+print("Welcome to Python Pizza Deliveries!")
+size = input("What size pizza do you want? S, M, or L ")
+add_pepperoni = input("Do you want pepperoni? Y or N ")
+extra_cheese = input("Do you want extra cheese? Y or N ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+
+total = 0
+
+if size == 'S':
+    if add_pepperoni =='Y':
+        total += 17
+    elif add_pepperoni == 'N':
+        total += 15
+elif size == 'M':
+    if add_pepperoni =='Y':
+        total += 23
+    elif add_pepperoni == 'N':
+        total += 20
+elif size == 'L':
+    if add_pepperoni =='Y':
+        total += 28
+    elif add_pepperoni == 'N':
+        total += 25
+if extra_cheese == 'Y':
+    total += 1
+
+print(f'Your total is ${total}')
+
