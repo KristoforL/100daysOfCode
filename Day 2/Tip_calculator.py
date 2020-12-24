@@ -6,8 +6,8 @@
 #HINT 2: https://www.kite.com/python/answers/how-to-limit-a-float-to-two-decimal-places-in-python
 
 print('Welcome to the tip calculator!')
-cost = input("What is the bill amount?\n")
-people = input("How many people are paying?\n$")
+cost = input("What is the bill amount?\n$")
+people = input("How many people are paying?\n")
 tip = input("What percentage tip do you want to leave? 10 15 18 20 or custom amount\n")
 
 cost = float(cost)
@@ -16,5 +16,5 @@ tip = (float(tip) * .01) + 1 #Converts it to a percentage and adds one
 with_tip = cost * tip #Added one to the tip above so that we can get the total amount with the tip
 
 #The total bill will be the cost with tip divided by total people paying
-bill = round((with_tip / people), 2)
+bill = "{:.2f}".format(with_tip / people) #Used format() here so that we will always get 2 digits behind the decimal
 print(f'Each person should pay ${bill}.')
