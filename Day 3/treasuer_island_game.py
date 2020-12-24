@@ -38,4 +38,4 @@ if way.lower() == 'l':
     else:
         print('You have been swept by the current and ye belogn to Davy Jones!!\nGame Over')
 else:
-    print('You fall into a hole filled with me pet gators boyol.\nGame Over')
+    print('You fall into a hole filled with me pet gators boyol.\n Game Over')
