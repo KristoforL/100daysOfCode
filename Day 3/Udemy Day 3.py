@@ -145,3 +145,67 @@ if extra_cheese == 'Y':
 
 print(f'Your total is ${total}')
 
+
+#The above rollercoaster program could be made easier with logical operators
+if height > 53:
+    age = int(input('How old are you?\n'))
+    bill = 0
+    if age < 12:
+        print('Price is $5')
+        bill = 5
+    elif age <=18:
+        print('Price is $7')
+        bill = 7
+    elif age >= 45 and age <= 55:
+        print('Free for you')
+    else:
+        print('Price is $12')
+        bill = 12
+
+    extra = input('Do you want a photo taken? y/N\n')
+    if extra == 'y':
+        bill+=3
+        print(f'You pay ${bill}')
+    else:
+        print(f'You pay ${bill}')
+
+else:
+    print('Sorry you have to wait until you are taller to ride')
+
+
+
+#Day 4 Challenge 4 is a compatible calculator where we check names for love
+
+# 🚨 Don't change the code below 👇
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+
+true = 'true'
+love = 'love'
+
+true_total = 0
+love_total = 0
+
+complete = name1 + name2
+
+for letter in true:
+    count = complete.count(letter.lower())
+    true_total += count
+
+for letter in love:
+    count = complete.count(letter.lower())
+    love_total += count
+
+combined = int(str(true_total) + str(love_total))
+
+if combined <10 or combined >90:
+    print(f"Your score is {combined}, you go together like coke and mentos.")
+elif combined > 40 and combined  < 50:
+    print(f"Your score is {combined}, you are alright together.")
+else:
+    print(f"Your score is {combined}.")
+
