@@ -87,7 +87,7 @@ elif player.lower() == 'p':
 """)
         print('Copmuter threw scissors. You Lose')
 #Scissors
-else:
+elif player.lower() == 's':
     print("""
     _______
 ---'   ____)____
@@ -127,4 +127,5 @@ else:
 """)
         print('Compuer threw scissors. It is a tie.')
 
-
+else:
+    print('You chose an invalid selection. You lose')
