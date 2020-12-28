@@ -1,5 +1,3 @@
-#Using what we have learned so far to create  hangman game at the end of the lesson.
-
 import random as r
 import hangman_art as ha
 import hangman_words as hw
@@ -49,7 +47,3 @@ while not end_game:
     if '_' not in completed:
         print('The word is ' + ''.join(completed) + '. You Win')
         end_game = True
-
-    
-
-
