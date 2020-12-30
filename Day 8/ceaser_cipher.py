@@ -1,21 +1,51 @@
-def prime_checker(number):
-    if number == 0 or number == 1:
-        print(f'{number} is not prime')
-    elif number == 2:
-        print(f'{number} is prime.')
-    else:
-        for digit in range(2, number):
-            if number % digit != 0:
-                print(f'{number} is prime.')
-                break
-            if number % digit == 0:
-                print(f'{number} is not prime:')
-                break
+
+#Creating the caesar cipher
+
+import art as a
 
 
-#Write your code above this line 👆
-    
-#Do NOT change any of the code below👇
-n = int(input("Check this number: "))
-prime_checker(number=n)
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z''a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
+print(f'{a.logo}')
+
+
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
+
+
+def caesar(text, shift, direction):
+    if shift > 26:
+        shift = shift % 25
+
+    cipher_text = ''
+    if direction == 'encode':
+        for letter in text:
+            if letter == ' ':
+                cipher_text += letter
+            else:
+                location = alphabet.index(letter) + shift
+                cipher_text += alphabet[location]
+            
+    elif direction == 'decode':
+        for letter in text:
+            if letter == ' ':
+                cipher_text += letter
+            else:
+                location = alphabet.index(letter) - shift
+                cipher_text += alphabet[location]
+
+    print(cipher_text)
+
+
+keep_going = True
+
+while keep_going:
+    if direction.lower() == 'encode':
+        caesar(text, shift, direction = 'encode')
+    elif direction.lower() == 'decode':
+        caesar(text, shift, direction = 'decode')
+    again = input('Want to continue? Y/N\n')
+    if again.lower() == 'n':
+        keep_going == False 
+        print('Good Bye')
