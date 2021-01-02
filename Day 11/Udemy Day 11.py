@@ -96,12 +96,16 @@ player_count = player[0] + player[1]
 computer_count = computer[0] + computer[1]
 
 #Just checking to make sure everything is working
-print(f'{player}\n{computer}\n[{computer[0]}]')  
-print(f'{player_count}\n{computer_count}') 
+#print(f'{player}\n{computer}\n[{computer[0]}]') 
 
 gameover = True
 
+#Just checking to make sure everything is working
+print(f'Player: {player}\nDealer: [{computer[0]}]') 
+
 while gameover:
+
+    
 
     if player_count > 21:
         print(f'Your score is {player_count}. You bust! You lose')
@@ -110,6 +114,7 @@ while gameover:
         #    blackjack()
         #else:
         #    return 'Gameover\nThank you for playing'    
+        break
     elif player_count == 21:
         if computer_count == 21:
             print(f'Dealer wins\nPlayer Hand: {player}\nDealer Hand: {computer}')
@@ -125,20 +130,27 @@ while gameover:
             #    blackjack()
             #else:
             #    return 'Gameover\nThank you for playing' 
+            break
 
     hit = input('Do you want to hit? Y/N\n').lower()
-    if hit == 'y':
-        choice = player.append(r.choice(cards))
+    if hit == 'y': 
+        player.append(r.choice(cards))
+        choice = player[-1]
         player_count += choice
         if player_count > 21:
             print(f'Your score is {player_count}. You bust! You lose')
         elif player_count == 21:
             if computer_count == 21:
                 print(f'Dealer wins\nPlayer Hand: {player}\nDealer Hand: {computer}')
-    else:
+            else:
+                print(f'You win\nPlayer Hand: {player}\nDealer Hand: {computer}')
+        print(f'{player}\n[{computer[0]}]')
+
+    elif hit == 'n':
         if computer_count < 17:
-            another_one = computer.append(r.choice(cards))
-            computer_count += choice
+            computer.append(r.choice(cards))
+            another_one = computer[-1]
+            computer_count += another_one
             if computer_count == 21:
                 if player_count == 21:
                     print(f'Dealer wins\nPlayer Hand: {player}\nDealer Hand: {computer}')
@@ -147,6 +159,8 @@ while gameover:
                     #    blackjack()
                     #else:
                     #    return 'Gameover\nThank you for playing' 
+            elif computer_count > 21:
+                print(f'Player wins\nPlayer Hand: {player}\nDealer Hand: {computer}')
         
         elif computer_count == 21:
             print(f'Dealer wins\nPlayer Hand: {player}\nDealer Hand: {computer}')
@@ -155,24 +169,31 @@ while gameover:
             #    blackjack()
             #else:
             #    return 'Gameover\nThank you for playing' 
-        elif player_count > computer_count:
-            print(f'You win\nPlayer Hand: {player}\nDealer Hand: {computer}')
-            #again = input('Do you want to play again? Y/N\n').lower()
-            #if again == 'y':
-            #    blackjack()
-            #else:
-            #    return 'Gameover\nThank you for playing' 
-        elif player_count == computer_count:
-            print(f'It is a draw\nPlayer: {player_count}\nDealer: {computer_count}')
-            #again = input('Do you want to play again? Y/N\n').lower()
-            #if again == 'y':
-            #    blackjack()
-            #else:
-            #    return 'Gameover\nThank you for playing' 
-
-    #Just checking to make sure everything is working
-    print(f'{player}\n{computer}\n[{computer[0]}]')  
-    print(f'{player_count}\n{computer_count}')  
+        elif computer_count < 21:
+            if player_count > computer_count:
+                print(f'Player wins\nPlayer Hand: {player}\nDealer Hand: {computer}')
+                #again = input('Do you want to play again? Y/N\n').lower()
+                #if again == 'y':
+                #    blackjack()
+                #else:
+                #    return 'Gameover\nThank you for playing' 
+            elif player_count == computer_count:
+                print(f'It is a draw\nPlayer: {player_count}\nDealer: {computer_count}')
+                #again = input('Do you want to play again? Y/N\n').lower()
+                #if again == 'y':
+                #    blackjack()
+                #else:
+                #    return 'Gameover\nThank you for playing'
+            elif player_count < computer_count:
+                print(f'Dealer wins\nPlayer Hand: {player}\nDealer Hand: {computer}')
+                #again = input('Do you want to play again? Y/N\n').lower()
+                #if again == 'y':
+                #    blackjack()
+                #else:
+                #    return 'Gameover\nThank you for playing' 
+    
+        gameover = False
+        
 
 
 
