@@ -105,14 +105,13 @@ print(f'Player: {player}\nDealer: [{computer[0]}]')
 
 while gameover:
 
-    
-
     if player_count > 21:
         for card in enumerate(player):
             if card == 11:
                 player[card] = 1
         if player_count > 21:
             print(f'Your score is {player_count}. You bust! You lose')
+            print(f'Player Hand: {player}\nComputer Hand: [{computer}]')
         #again = input('Do you want to play again? Y/N\n').lower()
         #if again == 'y':
         #    blackjack()
@@ -141,20 +140,23 @@ while gameover:
         player.append(r.choice(cards))
         choice = player[-1]
         player_count += choice
+        print(f'Player Hand: {player}\nComputer Hand: [{computer[0]}]')
         if player_count > 21:
             for card in player:
                 if card == 11:
                     player[card] = 1
             if player_count > 21:
                 print(f'Your score is {player_count}. You bust! You lose')
-        
+                print(f'Player Hand: {player}\nComputer Hand: [{computer}]')
+                gameover = False
+
         elif player_count == 21:
             if computer_count == 21:
                 print(f'Dealer wins\nPlayer Hand: {player}\nDealer Hand: {computer}')
+                gameover = False
             else:
                 print(f'You win\nPlayer Hand: {player}\nDealer Hand: {computer}')
-        
-        print(f'Player Hand: {player}\nComputer Hand: [{computer[0]}]')
+                gameover = False
 
     elif hit == 'n':
         if computer_count < 17:
@@ -164,6 +166,7 @@ while gameover:
             if computer_count == 21:
                 if player_count == 21:
                     print(f'Dealer wins\nPlayer Hand: {player}\nDealer Hand: {computer}')
+                    gameover = False
                     #again = input('Do you want to play again? Y/N\n').lower()
                     #if again == 'y':
                     #    blackjack()
@@ -171,15 +174,18 @@ while gameover:
                     #    return 'Gameover\nThank you for playing'
                 else:
                     print(f'Dealer wins\nPlayer Hand: {player}\nDealer Hand: {computer}')
+                    gameover = False
             elif computer_count > 21:
                 for card in enumerate(computer):
                     if card == 11:
                         computer[card] = 1
                     if computer_count > 21:
                         print(f'Player wins\nPlayer Hand: {player}\nDealer Hand: {computer}')
+                        gameover = False
         
         elif computer_count == 21:
             print(f'Dealer wins\nPlayer Hand: {player}\nDealer Hand: {computer}')
+            gameover = False
             #again = input('Do you want to play again? Y/N\n').lower()
             #if again == 'y':
             #    blackjack()
@@ -188,6 +194,7 @@ while gameover:
         elif computer_count < 21:
             if player_count > computer_count:
                 print(f'Player wins\nPlayer Hand: {player}\nDealer Hand: {computer}')
+                gameover = False
                 #again = input('Do you want to play again? Y/N\n').lower()
                 #if again == 'y':
                 #    blackjack()
@@ -195,6 +202,7 @@ while gameover:
                 #    return 'Gameover\nThank you for playing' 
             elif player_count == computer_count:
                 print(f'It is a draw\nPlayer: {player_count}\nDealer: {computer_count}')
+                gameover = False
                 #again = input('Do you want to play again? Y/N\n').lower()
                 #if again == 'y':
                 #    blackjack()
@@ -202,6 +210,7 @@ while gameover:
                 #    return 'Gameover\nThank you for playing'
             elif player_count < computer_count:
                 print(f'Dealer wins\nPlayer Hand: {player}\nDealer Hand: {computer}')
+                gameover = False
                 #again = input('Do you want to play again? Y/N\n').lower()
                 #if again == 'y':
                 #    blackjack()
