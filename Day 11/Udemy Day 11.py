@@ -108,7 +108,11 @@ while gameover:
     
 
     if player_count > 21:
-        print(f'Your score is {player_count}. You bust! You lose')
+        for card in enumerate(player):
+            if card == 11:
+                player[card] = 1
+        if player_count > 21:
+            print(f'Your score is {player_count}. You bust! You lose')
         #again = input('Do you want to play again? Y/N\n').lower()
         #if again == 'y':
         #    blackjack()
@@ -138,13 +142,19 @@ while gameover:
         choice = player[-1]
         player_count += choice
         if player_count > 21:
-            print(f'Your score is {player_count}. You bust! You lose')
+            for card in player:
+                if card == 11:
+                    player[card] = 1
+            if player_count > 21:
+                print(f'Your score is {player_count}. You bust! You lose')
+        
         elif player_count == 21:
             if computer_count == 21:
                 print(f'Dealer wins\nPlayer Hand: {player}\nDealer Hand: {computer}')
             else:
                 print(f'You win\nPlayer Hand: {player}\nDealer Hand: {computer}')
-        print(f'{player}\n[{computer[0]}]')
+        
+        print(f'Player Hand: {player}\nComputer Hand: [{computer[0]}]')
 
     elif hit == 'n':
         if computer_count < 17:
@@ -158,9 +168,15 @@ while gameover:
                     #if again == 'y':
                     #    blackjack()
                     #else:
-                    #    return 'Gameover\nThank you for playing' 
+                    #    return 'Gameover\nThank you for playing'
+                else:
+                    print(f'Dealer wins\nPlayer Hand: {player}\nDealer Hand: {computer}')
             elif computer_count > 21:
-                print(f'Player wins\nPlayer Hand: {player}\nDealer Hand: {computer}')
+                for card in enumerate(computer):
+                    if card == 11:
+                        computer[card] = 1
+                    if computer_count > 21:
+                        print(f'Player wins\nPlayer Hand: {player}\nDealer Hand: {computer}')
         
         elif computer_count == 21:
             print(f'Dealer wins\nPlayer Hand: {player}\nDealer Hand: {computer}')
