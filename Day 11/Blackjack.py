@@ -86,6 +86,7 @@ def score(hand):
 
 #Hint 11: The score will need to be rechecked with every new card drawn and the checks in Hint 9 need to be repeated until the game ends.
 
+#Hint 12: Once the user is done, it's time to let the computer play. The computer should keep drawing cards as long as it has a score less than 17.
 
 player_score = score(player)
 dealer_score = score(dealer)
@@ -104,7 +105,7 @@ while not gameover:
             player_score = score(player)
             print(f'Player Hand: {player}\nDealer Hand: {dealer}')
         elif hit == 'n':
-            while dealer_score != 0 and  dealer_score < 17:
+            while dealer_score != 0 and dealer_score < 17:
                 dealer.append(deal())
                 dealer_score = score(dealer)
                 print(f'Player Hand: {player}\nDealer Hand: {dealer}')
@@ -113,12 +114,32 @@ while not gameover:
 
 
 
-#Hint 12: Once the user is done, it's time to let the computer play. The computer should keep drawing cards as long as it has a score less than 17.
-
 #Hint 13: Create a function called compare() and pass in the user_score and computer_score. If the computer and user both have the same score, then it's a draw. If the computer has a blackjack (0), then the user loses. If the user has a blackjack (0), then the user wins. If the user_score is over 21, then the user loses. If the computer_score is over 21, then the computer loses. If none of the above, then the player with the highest score wins.
+
+def compare(user, computer):
+    """Copmares scores to see who wins"""
+    if user == computer:
+        print(f'It is a draw.\nPlayer Hand: {player}\nDealer Hand: {dealer}')
+    elif computer == 0:
+        print(f'Dealer has blackjack!\nPlayer Hand: {player}\nDealer Hand: {dealer}')
+    elif user == 0:
+        print(f'Player has blackjack!!\nPlayer Hand: {player}\nDealer Hand: {dealer}')
+    elif user > 21:
+        print(f'Player bust! Player loses.\nPlayer Hand: {player}\nDealer Hand: {dealer}')
+    elif computer > 21:
+        print(f'Dealer bust! Dealer loses.\nPlayer Hand: {player}\nDealer Hand: {dealer}')
+    elif computer > user:
+        print(f'Dealer Wins!\nPlayer Hand: {player}\nDealer Hand: {dealer}')
+    elif user > computer:
+        print(f'Player wins!!,\nPlayer Hand: {player}\nDealer Hand: {dealer}')
+
+compare(player_score, dealer_score)
 
 #Hint 14: Ask the user if they want to restart the game. If they answer yes, clear the console and start a new game of blackjack and show the logo from art.py.
 
+dealagain = input('Do you want to play another game? Y/N\n').lower()
 
-
+if dealagain == 'y':
+    print(f'{ba.logo}')
+    deal()
 
