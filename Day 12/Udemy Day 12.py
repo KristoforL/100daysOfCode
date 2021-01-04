@@ -1,0 +1,1 @@
+#Will be focusing on scopes and how to utilize them
