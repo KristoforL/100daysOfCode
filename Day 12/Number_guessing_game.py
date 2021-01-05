@@ -23,11 +23,11 @@ def guess_game():
             print(f'{attempt} is correct! You win')
             guess = 0
         elif attempt > number:
-            print(f'{attempt} is too big')
             guess -= 1
+            print(f'{attempt} is too big. You have {guess} tries left')
         else:
-            print(f'{attempt} is too small')
             guess -= 1
+            print(f'{attempt} is too small You have  {guess} tries left')
 
         if guess == 0 and attempt != number:
             print(f'Nice try but the number was {number}')
@@ -46,13 +46,8 @@ def clear():
 while input('Do you want to play a number guessing game? Y/N\n').lower() == 'y':
     clear()
     print(gga.logo)
-    number = r.randint(1, 101)
+    number = r.randint(1, 100)
     guess_game()
 
 clear()
 print(f'Thank you. See you again')
-
-
-
-
-
