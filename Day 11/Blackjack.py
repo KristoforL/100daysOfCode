@@ -2,6 +2,7 @@
 import random as r
 import blackjack_art as ba
 import math as m
+from sys import platform
 import os
 
 ##################### Hints #####################
@@ -51,8 +52,6 @@ def deal():
     cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10] 
     return r.choice(cards)
 
-
-
 def score(hand):
     """Calaulates the scores for the players"""
     if sum(hand) == 21 and len(hand) == 2:
@@ -63,7 +62,6 @@ def score(hand):
         hand.append(1)
 
     return sum(hand)
-
 
 def compare(user, computer):
     """Copmares scores to see who wins"""
@@ -118,11 +116,23 @@ def play_game():
     compare(player_score, dealer_score)  
     print(f'    Player Hand: {player} Score: {player_score}\n    Dealer Hand: {dealer} Score: {dealer_score}')
 
+def clear():
+    if platform == "linux" or platform == "linux2":
+        #linux
+        os.system('clear')
+    elif platform == "darwin":
+        # OS X
+        os.system("clear")
+    elif platform == "win32":
+        # Windows...
+        os.system("cls")
+
 
 while input('Do you want to play blackjack? Y/N\n').lower() == 'y':
-    os.system("cls")
+    clear()
     play_game()
 
-os.system("cls")
+
+clear()
 print('Thank you for playing')
 
