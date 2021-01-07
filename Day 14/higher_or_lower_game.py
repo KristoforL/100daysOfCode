@@ -1,10 +1,21 @@
-#Creating a game called higher or lower
-
 import game_data as ga
 import random as r
 import higher_or_lower_art as hla
 import sys as s
 import os
+
+#Create a function that randomly selects a persons dictionary from the data list in the data file
+
+#Create a functiont to increase the score
+
+#Create a function to display the data in the dictionary for the player
+
+#Create a function to compare the followers of the random people and check if user is correct
+
+#Repeat the comparison if the user is right and if they are wrong end the program and show the score
+
+
+
 
 def clear():
     """Clears the window based on the operating system"""
@@ -30,7 +41,11 @@ def score_up(a):
 
 def vs(a, b):
     """Shows who the player has to choose between"""  
-    print(f"A: {a['name']}\n{hla.vs}\nB: {b['name']}")
+    #Made it less congested and more readable
+    a_formatted = f"A: {a['name']}, {a['description']} from {a['country']}"
+    b_formatted = f"B: {b['name']}, {b['description']} from {b['country']}"
+
+    print(f'{a_formatted}\n{hla.vs}\n{b_formatted}')
 
 def high_lower():
     score = 0
