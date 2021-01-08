@@ -81,6 +81,8 @@ elif cafe != 'off' or cafe != 'report':
 # not continue to make the drink but print: “Sorry there is not enough water.”
 # c. The same should happen if another resource is depleted, e.g. milk or coffee.
 
+
+
 if cafe == 'espresso' or cafe == 'latte' or cafe == 'cappuccino':
     water = MENU[cafe]['ingredients']['water']
     milk = MENU[cafe]['ingredients']['milk']
@@ -95,16 +97,36 @@ if cafe == 'espresso' or cafe == 'latte' or cafe == 'cappuccino':
 
     print(resources)
 
-
-
-
-
 # 5. Process coins.
 # a. If there are sufficient resources to make the drink selected, then the program should
 # prompt the user to insert coins.
 # b. Remember that quarters = $0.25, dimes = $0.10, nickles = $0.05, pennies = $0.01
 # c. Calculate the monetary value of the coins inserted. E.g. 1 quarter, 2 dimes, 1 nickel, 2
 # pennies = 0.25 + 0.1 x 2 + 0.05 + 0.01 x 2 = $0.52
+
+def coins():
+    """Adds coins to amount deposited for drink"""
+    quarters = int(input('How many quarters:\n')) * .25
+    dimes = int(input('How many quarters:\n')) * .1
+    nickels = int(input('How many quarters:\n')) * .05
+    pennies = int(input('How many quarters:\n')) * .01
+
+    total = quarters + dimes + nickels + pennies
+
+    return total
+
+
+
+
+change = 0
+
+
+
+
+
+
+
+
 
 
 # 6. Check transaction successful?
