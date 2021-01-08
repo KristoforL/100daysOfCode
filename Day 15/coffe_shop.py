@@ -53,42 +53,60 @@ resources = {
 # Coffee: 76g
 # Money: $2.5
 
-coffee = input('What would you like? (espresso/latte/cappuccino):\n').lower()
+cafe = input('What would you like? (espresso/latte/cappuccino):\n').lower()
 
 profit = float(0)
 
-amount = MENU[coffee]['cost']
-print(type(amount))
-
-if coffee == 'off' or coffee == 'report':
-    if coffee == 'off':
+if cafe == 'off' or cafe == 'report':
+    if cafe == 'off':
         print('Goodbye')
-    elif coffee == 'report':
+    elif cafe == 'report':
         for item in resources:
             print(f"{item}: {resources[item]}")
-elif coffee != 'off' or coffee != 'report':
-    if coffee == 'espresso':
-        print(f"That will cost ${MENU[coffee]['cost']}")
-    elif coffee == 'latte':
-        print(f"That will cost ${MENU[coffee]['cost']}")
-    elif coffee == 'cappuccino':
-        print(f"That will cost ${MENU[coffee]['cost']}")
+elif cafe != 'off' or cafe != 'report':
+    if cafe == 'espresso':
+        print(f"That will cost ${MENU[cafe]['cost']}")
+    elif cafe == 'latte':
+        print(f"That will cost ${MENU[cafe]['cost']}")
+    elif cafe == 'cappuccino':
+        print(f"That will cost ${MENU[cafe]['cost']}")
     else:
-        print(f'Sorry {coffee} is not an option')
+        print(f'Sorry {cafe} is not an option')
 
 
-# 4. Check resources sufficient?
+#TODO 4. Check resources sufficient?
 # a. When the user chooses a drink, the program should check if there are enough
 # resources to make that drink.
 # b. E.g. if Latte requires 200ml water but there is only 100ml left in the machine. It should
 # not continue to make the drink but print: “Sorry there is not enough water.”
 # c. The same should happen if another resource is depleted, e.g. milk or coffee.
+
+if cafe == 'espresso' or cafe == 'latte' or cafe == 'cappuccino':
+    water = MENU[cafe]['ingredients']['water']
+    milk = MENU[cafe]['ingredients']['milk']
+    coffee = MENU[cafe]['ingredients']['coffee']
+
+    if resources['water'] >= water and resources['milk'] >= milk and resources['coffee'] >= coffee:
+        resources['water'] -= water
+        resources['milk'] -= milk
+        resources['coffee'] -= coffee
+    else:
+        print('Sorry, there are not enough ingredients to make this drink.')
+
+    print(resources)
+
+
+
+
+
 # 5. Process coins.
 # a. If there are sufficient resources to make the drink selected, then the program should
 # prompt the user to insert coins.
 # b. Remember that quarters = $0.25, dimes = $0.10, nickles = $0.05, pennies = $0.01
 # c. Calculate the monetary value of the coins inserted. E.g. 1 quarter, 2 dimes, 1 nickel, 2
 # pennies = 0.25 + 0.1 x 2 + 0.05 + 0.01 x 2 = $0.52
+
+
 # 6. Check transaction successful?
 # a. Check that the user has inserted enough money to purchase the drink they selected.
 # E.g Latte cost $2.50, but they only inserted $0.52 then after counting the coins the
@@ -102,6 +120,8 @@ elif coffee != 'off' or coffee != 'report':
 # c. If the user has inserted too much money, the machine should offer change.
 # E.g. “Here is $2.45 dollars in change.” The change should be rounded to 2 decimal
 # places.
+
+
 # 7. Make Coffee.
 # a. If the transaction is successful and there are enough resources to make the drink the
 # user selected, then the ingredients to make the drink should be deducted from the

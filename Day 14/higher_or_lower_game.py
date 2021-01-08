@@ -94,9 +94,9 @@ def high_lower():
 while input('Do you want to play higher or lower follower game? Y/N\n').lower() == 'y':
     clear()
     high_lower()
-
-clear()
-print('Thank you')
+else:
+    clear()
+    print('Thank you')
 
 
 
