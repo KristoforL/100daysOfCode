@@ -116,17 +116,7 @@ def coins():
     return total
 
 
-
-
 change = 0
-
-
-
-
-
-
-
-
 
 
 # 6. Check transaction successful?
