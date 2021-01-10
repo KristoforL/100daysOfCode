@@ -154,6 +154,8 @@ def make_drink(cafe, ingredients):
 
 on = True
 while on:
+    clear()
+    print(ca.logo)
     cafe = input('What would you like? (espresso/latte/cappuccino):\n').lower()
     if cafe == 'off':
         on = False
