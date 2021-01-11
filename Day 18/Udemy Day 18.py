@@ -133,12 +133,20 @@ def walk(turtle, steps):
 
 
 #Challenge 5 is to make a spirograph
+# for i in range(360):
+#     timmy.speed('fastest')
+#     timmy.circle(120, 360)
+#     timmy.left(1)
+#     timmy.pencolor(rand_color())
 
-for i in range(360):
-    timmy.speed('fastest')
-    timmy.circle(120, 360)
-    timmy.left(1)
-    timmy.pencolor(rand_color())
+#Udemy spirograph block
+def spirograph(turtle, gap):
+    turtle.speed('fastest') 
+    for i in range(int(360 / gap)):
+        turtle.color(rand_color())
+        turtle.circle(100)
+        turtle.seth(turtle.heading() + gap)
+
 
 
 screen = t.Screen()
@@ -150,5 +158,5 @@ screen = t.Screen()
 #     shapes(sides)
 #     timmy.color(choice(colors))
 #walk(timmy, 100)
-
+spirograph(timmy, 15)
 screen.exitonclick()
