@@ -1,0 +1,1 @@
+#Todays lesson will be interacting with the GUI, Tuples, and finishing up with making art
