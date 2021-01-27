@@ -1,5 +1,5 @@
 # Day 1 code will have comments before the block of code
-### Blocks printed with hyphens between are seperate lessons and will have comments for what is covered in the space ###
+### Blocks printed with hyphens between are separate lessons and will have comments for what is covered in the space ###
 
 ###--Variables, manipulating variaable and representing variables in print statements--###
 
@@ -11,10 +11,10 @@ print(message)
 message = ("Now this is when it gets a little bothersome typing all this out")
 print(message)
 
-#Peresonal Message: THis will be a message to someone with their name being represented as a variable.
+#Personal Message: THis will be a message to someone with their name being represented as a variable.
 first = "Jacquawn"
 last =  "Lockhart"
-#In this I made the first and last name a variable so that I do not haveto type the first and last name variable every time
+#In this I made the first and last name a variable so that I do not have to type the first and last name variable every time
 full = f"{first} {last}"
 print(f"Hello {full}, how are you?")
 
@@ -24,7 +24,7 @@ print(f"{full.upper()}, {full.lower()}, {full.title()}")
 #Making a message from variables and putting them in strings
 famous_per = "Albert Einstein"
 famous_quote = "e=mc^2"
-print(f"{famous_per}, once saide {famous_quote}")
+print(f"{famous_per}, once said {famous_quote}")
 
 #Making a string message variable that includes other variables
 message = f"{famous_per}, once said the famous calculation {famous_quote}"
