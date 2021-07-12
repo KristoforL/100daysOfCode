@@ -67,7 +67,7 @@ else:
     print(f'Your BMI is {BMI}. You are "clinically obese"')
 
 
-#Day 3 Challenege 3 wants to chek and return if a year is a leap year
+#Day 3 Challenge 3 wants to check and return if a year is a leap year
 
 # 🚨 Don't change the code below 👇
 year = int(input("Which year do you want to check? "))
@@ -88,7 +88,7 @@ else:
 
 
 #Sometimes you will have to ask multiple things and to final results
-if height > 53:
+if height > 1.2:
     age = int(input('How old are you?\n'))
     bill = 0
     if age < 12:
@@ -147,7 +147,7 @@ print(f'Your total is ${total}')
 
 
 #The above rollercoaster program could be made easier with logical operators
-if height > 53:
+if height > 1.2:
     age = int(input('How old are you?\n'))
     bill = 0
     if age < 12:

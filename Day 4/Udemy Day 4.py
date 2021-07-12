@@ -1,5 +1,5 @@
 # #Day 4 of code will be about using random module
-# #A module is a python file that containes many functions, classes, and methods to limit the amount of code necessary in programs
+# #A module is a python file that contains many functions, classes, and methods to limit the amount of code necessary in programs
 import random
 
 rand_int = random.randint(100,200)
@@ -27,7 +27,7 @@ states_of_amaerica[0] == 'delaware'
 states_of_amaerica.append('Puerto Rico')
 
 
-#Day 4 challenege 2 wants me to split everyones name
+#Day 4 challenge 2 wants me to split everyones name
 # Split string method
 names_string = input("Give me everybody's names, separated by a comma. ")
 names = names_string.split(", ")
@@ -60,7 +60,7 @@ row2 = ["⬜️","⬜️","⬜️"]
 row3 = ["⬜️","⬜️","⬜️"]
 map = [row1, row2, row3]
 print(f"{row1}\n{row2}\n{row3}")
-position = input("Where do you want to put the treasure? Use a two digit number where the first number is vertical and the second number is how far to the right usch as 11, 32, or 21 for example\n")
+position = input("Where do you want to put the treasure? Use a two digit number where the first number is vertical and the second number is how far to the right such as 11, 32, or 21 for example\n")
 # 🚨 Don't change the code above 👆
 
 #Write your code below this row 👇

@@ -10,7 +10,7 @@ print("print('what to print')")
 
 #Here we will learn about manipulating the strings
 #New lines use \n which means new line
-#We can add strings together as well with concatination
+#We can add strings together as well with concatenation
 print('This is all on the same line\nin the code')
 print('Hello ' + 'Kris')
 
@@ -33,7 +33,7 @@ name = input("What is your name:\n")
 
 #Day 1 Challenge 2 asked me to print out the length of a persons name
 #Because I am far more advanced I know how to use the len() function
-#Below I have brokoen each function with indention to show what is happening
+#Below I have broken each function with indention to show what is happening
 print(
     len(
         input(
@@ -49,7 +49,7 @@ b = input("b: ")
 #Write your code below this line 👇
 
 c = a #Pretty simple to add a variable that is not equal to anything
-a = b #Set a equal to be and b = c 
+a = b #Set a equal to b and b = c 
 b = c
 
 #Write your code above this line 👆

@@ -69,7 +69,7 @@ elif player.lower() == 's':
         print('Copmuter threw paper. You Win')
     elif computer == 3:
         print(RPS[2])
-        print('Compuer threw scissors. It is a tie.')
+        print('Computer threw scissors. It is a tie.')
 
 else:
     print('You chose an invalid selection. You lose')
