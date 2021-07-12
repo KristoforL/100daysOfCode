@@ -1,10 +1,10 @@
 #Day 18 of Code
 
-### Blocks printed with hyphens between are seperate lessons and will have comments for what is covered in the space ###
+### Blocks printed with hyphens between are separate lessons and will have comments for what is covered in the space ###
 
 ###--Files and exceptions. creating/editing/opening --###
 
-#Guestbook: Write a program that loops prompting for name and appending to the textfilie on new line
+#Guestbook: Write a program that loops prompting for name and appending to the textfile on new line
 
 
 

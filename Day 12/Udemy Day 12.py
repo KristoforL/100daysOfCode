@@ -9,7 +9,7 @@ def increase_enemies():
 
 #Prints enemies as 2 because we are still in function
 increase_enemies()
-#Outside the function though the enemeies is still 1
+#Outside the function though the enemies is still 1
 print(f'Enemies outside function: {enemies}!')
 
 
