@@ -174,7 +174,7 @@ if height > 1.2:
         print(f'You pay ${bill}')
     else:
         print(f'You pay ${bill}')
-
+ 
 else:
     print('Sorry you have to wait until you are taller to ride')
 
