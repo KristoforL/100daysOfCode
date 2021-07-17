@@ -41,7 +41,7 @@ if player.lower() == 'r':
         print('Computer threw rock. It is a tie')
     elif computer == 2:
         print(RPS[1])   
-        print('Copmuter threw paper. Computer wins')
+        print('Computer threw paper. Computer wins')
     elif computer == 3:
         print(RPS[2])
         print('Computer threw scissors. You win')
@@ -54,10 +54,10 @@ elif player.lower() == 'p':
         print('Computer threw rock. You Win')
     elif computer == 2:
         print(RPS[1])   
-        print('Copmuter threw paper. It is a tie')
+        print('Computer threw paper. It is a tie')
     elif computer == 3:
         print(RPS[2])
-        print('Copmuter threw scissors. You Lose')
+        print('Computer threw scissors. You Lose')
 #Scissors
 elif player.lower() == 's':
     print(RPS[2])
@@ -66,7 +66,7 @@ elif player.lower() == 's':
         print('Computer threw rock. You lose')
     elif computer == 2:
         print(RPS[1])   
-        print('Copmuter threw paper. You Win')
+        print('Computer threw paper. You Win')
     elif computer == 3:
         print(RPS[2])
         print('Computer threw scissors. It is a tie.')

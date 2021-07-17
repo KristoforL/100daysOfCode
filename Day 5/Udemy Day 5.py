@@ -1,7 +1,7 @@
 #Day 5 will be focusing on Python Loops
 
 fruits = ['Apple', 'Peach', 'Pair']
-#This for loop will go through each item in the list assign the item to the fruit variable and then print that fruit and then again with the next item in the list until there are not more items in the lis to print
+#This for loop will go through each item in the list assign the item to the fruit variable and then print that fruit and then again with the next item in the list until there are not more items in the list to print
 for fruit in fruits:
     print(fruit)
     print(fruit + " Pie")
