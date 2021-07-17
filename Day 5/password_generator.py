@@ -9,18 +9,18 @@ nr_letters= int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
-#Eazy Level - Order not randomised:
+#Easy Level - Order not randomized:
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
 pw = ''
 for number in range(0, nr_letters):
     pw = pw + random.choice(letters)
 for number in range(0, nr_symbols):
-    pw= pw + random.choice(symbols)
+    pw = pw + random.choice(symbols)
 for number in range(0, nr_numbers):
-    pw.pw + random.choice(numbers)
+    pw = pw + random.choice(numbers)
 print(pw)
 
-#Hard Level - Order of characters randomised:
+#Hard Level - Order of characters randomized:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 
 #Creates the emptypassword string 

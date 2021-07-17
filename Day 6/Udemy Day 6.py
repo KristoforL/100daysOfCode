@@ -3,7 +3,7 @@
 
 #Functions are recognized by name and immediate parenthesis
 #Methods usually follow a variable with a <.'name of method'()>
-#Print() is a funcitons
+#Print() is a functions
 
 #We can create our own functions by defining def with a name parenthesis and then a colon
 def myFunction():
@@ -15,7 +15,7 @@ myFunction()
 
 #Indentation determines blocks of codes functions and loop items
     
-#While loop are loops that will have a condition that needs to be met before it stops. Copmared to for loops, for loops will continue for a set amount of time specified. While loops might not ever end
+#While loop are loops that will have a condition that needs to be met before it stops. Compared to for loops, for loops will continue for a set amount of time specified. While loops might not ever end
 
 #For loops are good for iterating and performing task with each iteration
 #While loops are better when there is not clear indication of how many iterations are needed to meet the goal
@@ -49,7 +49,9 @@ myFunction()
 
 
 
-#The final project is the reborgs world maze where we get reborg to leave the maze
+#The final project is the reeborgs world maze where we get reborg to leave the maze
+#This project is in the resources tab of udemy or you can go to this link:
+#https://reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Maze&url=worlds%2Ftutorial_en%2Fmaze1.json
 
 # def turn_right():
 #     turn_left()
