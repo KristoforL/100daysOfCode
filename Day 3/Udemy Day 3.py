@@ -32,6 +32,8 @@ else:
     print(f'{number} is odd')
 
 #If Else statements can be nested within other if else statements
+height = int(input('How tall are you in inches\n'))
+
 if height > 53:
     age = int(input('How old are you?\n'))
     if age < 12:
@@ -88,6 +90,8 @@ else:
 
 
 #Sometimes you will have to ask multiple things and to final results
+height = float(input('How tall are you in meters\n'))
+
 if height > 1.2:
     age = int(input('How old are you?\n'))
     bill = 0
@@ -147,6 +151,8 @@ print(f'Your total is ${total}')
 
 
 #The above rollercoaster program could be made easier with logical operators
+height = float(input('How tall are you in meters\n'))
+
 if height > 1.2:
     age = int(input('How old are you?\n'))
     bill = 0
@@ -168,7 +174,7 @@ if height > 1.2:
         print(f'You pay ${bill}')
     else:
         print(f'You pay ${bill}')
-
+ 
 else:
     print('Sorry you have to wait until you are taller to ride')
 

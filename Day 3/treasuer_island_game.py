@@ -30,12 +30,12 @@ way = input('You be on your way to botty galore. Which path you be taking pirate
 if way.lower() == 'l':
     water = input('Avast, you have stumbled upon a body of the deep blue. She is relentless. Do you swim or wait. swim/wait\n')
     if water.lower() == 'wait':
-        doors = input("Well aren't you patient you scruvy daswg. You have found to old black beards doors. Which one will you gander at. Ruby, Gold, or Sapphire.\n")
+        doors = input("Well aren't you patient you scruvy dawg. You have found to old black beards doors. Which one will you gander at. Ruby, Gold, or Sapphire.\n")
         if doors.lower() == 'gold':
             print('You bested black beard today. But beware of the curse on my treasure')
         else:
             print('Wrong door. Now you have been blown away by me cannon!!\nGame Over')
     else:
-        print('You have been swept by the current and ye belogn to Davy Jones!!\nGame Over')
+        print('You have been swept by the current and ye belong to Davy Jones!!\nGame Over')
 else:
     print('You fall into a hole filled with me pet gators boyol.\n Game Over')

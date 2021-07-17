@@ -64,7 +64,7 @@ print(f"Hello {friend[1]}")
 print(f"Hello {friend[2]}")
 
 #Custom list: Create a list of transportation. Print statements about a few
-transit = ["Jeep", "Fort GT", "Plane"]
+transit = ["Jeep", "Fort GT", "plane"]
 
 print(f"I love my {transit[0]}")
 print(f"I want a {transit[1]}")
