@@ -1,6 +1,6 @@
 #Using what we have learned so far to create  hangman game at the end of the lesson.
 
-import random as q
+import random as r
 import hangman_art as ha
 import hangman_words as hw
 
