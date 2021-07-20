@@ -39,8 +39,8 @@ def calculator():
         init_answer = operations[pick](num1, num2)
 
         print(f'{num1} {pick} {num2} = {init_answer}')
-        
-        if again =  input('Would you like to continue? Y/N\n').lower() == 'n':
+        #There is no need for a name variable below when in comparing in an if statement
+        if input('Would you like to continue? Y/N\n').lower() == 'n': 
             print('Goodbye')
             more_math = False
             calculator()

@@ -1,13 +1,13 @@
 #This is to focus dictionaries, list, and nesting them
 
-#Dictionaries are similar to actual dictionaries where there is a kay and value or word and definition
+#Dictionaries are similar to actual dictionaries where there is a key and value or word and definition
 
 
 programming_dictionary = {
     "Bug": "An error in a program that prevents the program from running as expected",
     "Functions": "A piece of code that you can easily call over and over again",
     "Loop": "The action of doing something over and over again",
-    1: "The first number when counting"
+    1: "The first number when counting unless you prefer to use zero"
 }
 
 #Retrieving the elements in the dictionary will need the square brackets and the key(The name or leading information for an entry)
@@ -26,7 +26,7 @@ empty_dictionary = {}
 programming_dictionary["Bug"] = "A moth in your computer"
 print(programming_dictionary)
 
-#Looping through dictionaries. I fyou use a traditional loop you will just get the key value and you would have to specify to get the value for that key
+#Looping through dictionaries. If you use a traditional loop you will just get the key value and you would have to specify to get the value for that key
 
 for thing in programming_dictionary:
     print(f'{thing}: {programming_dictionary[thing]}')
@@ -65,7 +65,7 @@ print(student_grades)
 
 list = [1,2,3,4,5]
 nested = {
-    "pie": "scumptious",
+    "pie": "scrumptious",
     "Cake": "It's okay"
 }
 nesting = {
